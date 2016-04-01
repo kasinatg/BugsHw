@@ -1,3 +1,45 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.users {
+ table {
+     width:100%;
+         margin: 0;
+    padding: 0;
+    border: 0;
+    border-spacing: 0;
+ }
+ th {
+     width:10%;
+     text-align:left;
+         margin: 0;
+    padding: 0;
+    border: 0;
+    border-spacing: 0;
+ }
+ tr {
+     width:10%;
+     text-align:left;
+         margin: 0;
+    padding: 0;
+    border: 0;
+    border-spacing: 0;
+    height:30px;
+ }
+ 
+ .alternate-row {
+    background-color:LightGrey;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-spacing: 0;
+ }
+ .row{
+    background-color:White;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-spacing: 0;
+ }
+}

@@ -1,0 +1,22 @@
+<% if user == @current_user %>
+    <% if @users.index(user) % 2 == 0  then %>
+         <tr id="current_user" class="row alternate-row" width="100%">
+    <% else %>
+         <tr id="current_user" class="row" width="100%">
+    <% end %>
+<% else %>
+    <% if @users.index(user) % 2 == 0  then %>
+         <tr class="row alternate-row" width="100%">
+    <% else %>
+         <tr class="row" width="100%">
+    <% end %>
+<% end %>
+
+    <td><%= user.fname %></td>
+    <td><%= user.lname %></td>
+    <td><%= user.email %></td>
+    <td><%= user.thumbnail %></td>
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user), remote: true %></td>
+    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, remote: true %></td>
+</tr>

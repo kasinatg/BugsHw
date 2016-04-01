@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Workspace</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+ <head>
+ <title>bug</title>
+ <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+ <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+ <%= csrf_meta_tags %>
+ </head>
+ <body class="<%= controller.controller_name %>">
+ <div id="banner">
+ <img class="banner_image" src="http://365psd.com/images/premium/thumbs/225/grasshopper-941322.jpg" alt="" />
+ <%= @page_title || "Bugaroo!!!" %>
+ </div>
+ <div id="columns">
+ <div id="side">
+ <ul>
+ <li><a href="/">Home</a></li>
+ <li><a href="/users">Users</a></li>
+ <li><a href="/bugs">Bugs</a></li>
+  <li><a href="/contact">Contact</a></li>
+ </ul>
+ </div>
+ <div id="main">
+ <%= yield %>
+ </div>
+ </div>
+ </body>
 </html>

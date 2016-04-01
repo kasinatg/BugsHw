@@ -1,0 +1,26 @@
+<% if @current_bug == bug then %>
+     <% if @bugs.index(bug) % 2 == 0  then %>
+          <div id="current_bug" class="bug_row bug_alternaterow">
+     <% else %>
+          <div id="current_bug" class="bug_row">
+     <% end %>
+<% else %>
+     <% if @bugs.index(bug) % 2 == 0  then %>
+          <div class="bug_row bug_alternaterow">
+     <% else %>
+          <div class="bug_row">
+     <% end %>
+<% end %>
+
+     <div class="bug_titlecolumn">
+         <span class="bug_title"><%= bug.title %></span>
+         <span class="bug_user"> Reported by <%= (bug.user.fname + ' ' + bug.user.lname || "NA")%></span>
+         <div class="bug_text"> <%= bug.description %> </div>
+     </div>
+     <div class="bug_issuetypecolumn"><%= bug.issuetype %></div>
+     <div class="bug_prioritycolumn"><%= bug.priority %> </div>
+     <div class="bug_statuscolumn"><%= bug.status %></div>
+     <div class="bug_actioncolumn"><%= link_to 'Show', bug %></div>
+     <div class="bug_actioncolumn"><%= link_to 'Edit', edit_bug_path(bug), remote:true %></div>
+     <div class="bug_actioncolumn"><%= link_to 'Destroy', bug, method: :delete, data: { confirm: 'Are you sure?' }, remote:true %></div>
+</div>

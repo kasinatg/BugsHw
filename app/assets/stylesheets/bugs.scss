@@ -1,3 +1,89 @@
 // Place all the styles related to the Bugs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.bugs {
+ .bug {
+ margin-bottom: 20px;
+ }
+ 
+ .bug_alternaterow {
+  background: lightgrey;
+ }
+ 
+
+.banner_image {
+    width: 4%;
+    
+}
+  
+ 
+ 
+ .bug_title {
+ font-size: 12px;
+ font-weight: bold;
+ }
+ 
+ .bug_user {
+ font-style: italic;
+ font-size: 12px;
+ }
+ 
+ .bug_text {
+ font-size: 12px;
+ }
+ 
+ .bug_column {
+ font-size: 12px;
+ font-weight: bold;
+ }
+
+ .bug_table {
+  display: table;
+  width: 100%;
+ }
+
+ .bug_row {
+  display: table-row;
+  width: 100%;
+  height:30px;
+ }
+ 
+ .bug_titlecolumn {
+  display:table-column;
+  float:left;
+  width:40%;
+  font-size: 12px;
+ }
+ 
+ .bug_issuetypecolumn {
+  display:table-column;
+  float:left;
+  width:10%;
+  font-size: 12px;
+ }
+ 
+ .bug_prioritycolumn {
+  display:table-column;
+  float:left;
+  width:10%;
+  font-size: 12px;
+ }
+ 
+ .bug_statuscolumn {
+  display:table-column;
+  float:left;
+  width:10%;
+  font-size: 12px;
+ }
+ 
+ .bug_actioncolumn {
+  display:table-column;
+  float:left;
+  width:10%;
+  font-size: 12px;
+ }
+}
+ 
+
+
+

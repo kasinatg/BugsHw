@@ -1,37 +1,26 @@
+<% if notice %>
 <p id="notice"><%= notice %></p>
+<% end %>
 
-<h1>Listing Bugs</h1>
+<span class="btn">
+    <%= link_to "New bug", new_bug_path, remote:true  %>
+</span>
 
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Issue type</th>
-      <th>Priority</th>
-      <th>Status</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<h1>Bugs</h1>
+<div class="bug_table">
+    <div class="bug_row">
+        <div class="bug_titlecolumn bug_column">Title</div>
+        <div class="bug_issuetypecolumn bug_column">Issue type</div>
+        <div class="bug_prioritycolumn bug_column"> Priority</div>
+        <div class="bug_statuscolumn bug_column"> Status</div>
+        <div class="bug_actioncolumn bug_column"></div>
+        <div class="bug_actioncolumn bug_column"></div>
+        <div class="bug_actioncolumn bug_column"></div>
+    </div>
+    <div class="bug_table" id="bugs">
+        <%= render @bugs %>
+    </div>
+ <br/>
+</div>
 
-  <tbody>
-    <% @bugs.each do |bug| %>
-      <tr>
-        <td><%= (bug.user.try(:fname) + ' ' + bug.user.try(:lname) || "NA") %></td>
-        <td><%= bug.title %></td>
-        <td><%= bug.description %></td>
-        <td><%= bug.issuetype %></td>
-        <td><%= bug.priority %></td>
-        <td><%= bug.status %></td>
-        <td><%= link_to 'Show', bug %></td>
-        <td><%= link_to 'Edit', edit_bug_path(bug) %></td>
-        <td><%= link_to 'Destroy', bug, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Bug', new_bug_path %>
+<div id="bug-form" style="display:none;"></div> 
